@@ -1,0 +1,51 @@
+.map
+  width var(--width)
+  height var(--height)
+
+  &__path
+    stroke #ffffff
+    transition .2s ease-out
+
+    &_active
+      fill #989b9e
+      stroke-width 3
+
+  &__tooltip
+    width 23rem
+    height 16rem
+    background #1d212770
+    border-radius 0.7rem
+    font-size 1.1rem
+    color #fff
+    position fixed
+    z-index 100
+    top var(--tooltip-y)
+    left var(--tooltip-x)
+    padding 1rem
+
+    &__content
+      display grid
+      grid-template-rows repeat(4, min-content)
+      grid-row-gap 1rem
+
+    &__flag
+      width 3rem
+      height 4rem
+      object-fit contain
+
+    &__name
+      margin-left 1rem
+
+    &__row-name
+      display flex
+      align-items center
+      justify-self center
+
+    &__row-indicator
+      font-weight 300
+
+    &__name
+    &__row-indicator span
+      font-weight bold
+      font-size 1.2rem
+

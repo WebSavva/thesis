@@ -1,0 +1,78 @@
+.regions-table
+  grid-column 2 / -1
+  border-radius var(--bor-rad-card)
+  box-shadow var(--dark-subtle-shadow)
+  display flex
+  flex-direction column
+
+  &__head
+    padding 1rem
+    font-weight bold
+    color var(--white-color)
+    background #5c6877
+    border-top-left-radius var(--bor-rad-card)
+    border-top-right-radius var(--bor-rad-card)
+
+    &__sort
+      padding 0.3rem
+      font-size 1.2rem
+
+      &:hover
+        filter brightness(70%)
+
+  &__row
+  &__head
+    font-size 1.3rem
+    width 100%
+    display grid
+    grid-template-columns repeat(4, minmax(-webkit-min-content, 1fr))
+    grid-template-columns repeat(4, minmax(min-content, 1fr))
+    grid-column-gap 0.5rem
+    align-items center
+    transition all 0.2s linear
+    text-align center
+    cursor pointer
+
+  &__row
+    color #808080
+    font-weight 400
+    height 8rem
+    cursor pointer
+    background-color var(--white-color)
+    font-weight 300
+    padding 0.5rem 1rem
+
+    &:nth-child(2n)
+      background-color #f8f6ff
+
+    &:hover &__cell
+      transform translateX(5px)
+
+    &&_selected
+      font-size 1.5rem
+      height 10rem
+      background #989b9e
+      color var(--white-color)
+
+    &__cell
+      transition all 0.2s ease-out
+
+      &:first-child
+        text-align left
+        font-weight bold
+
+  &__body
+    overflow-y auto
+    width 100%
+    scrollbar-width none
+    scroll-behavior smooth
+    border-bottom-left-radius var(--bor-rad-card)
+    border-bottom-right-radius var(--bor-rad-card)
+    display flex
+    flex-direction column
+
+    &::-webkit-scrollbar
+      -webkit-appearance none
+      appearance none
+      width 0
+

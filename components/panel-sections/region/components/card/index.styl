@@ -1,0 +1,65 @@
+.region-card
+  margin-top 2rem
+  box-shadow 0 1px 4px 0 rgba(0, 0, 0, .14)
+  border-radius 0.6rem
+  background var(--white-color)
+  align-self start
+  grid-column 2 / -1
+
+  --roll-transition .1s ease-in-out
+
+  &__header
+    display flex
+    justify-content center
+
+    &__icon-holder
+      padding 2rem
+      border-radius 0.6rem
+      box-shadow 0 4px 20px 0 rgba(0, 0, 0, .14)
+      align-self flex-start
+      background var(--red-color)
+      transform translateY(-1rem)
+
+      &__icon
+        font-size 4rem
+        color var(--white-color)
+
+    &__share
+      display flex
+      flex-direction column
+      padding 1rem
+      margin-left 4rem
+
+      &__title
+        font-size 1.4rem
+        color #999
+
+      &__details
+        text-align center
+        padding 0.5rem
+        font-size 4.5rem
+        font-weight 500
+        color #3c4858
+        margin-right 0.5rem
+        line-height 1
+        height 1.1em
+        overflow hidden
+
+        &__value
+          height 100%
+          display inline-block
+
+        &__percent
+          font-size 3rem
+
+  &__footer
+    border-top 1px solid #e2e0e0
+    margin 0 3rem
+    padding 1rem
+    text-align center
+    font-weight 400
+    color #8a8585
+
+    &__icon
+      color var(--red-color)
+      margin-right .5rem

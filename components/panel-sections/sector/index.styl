@@ -1,0 +1,23 @@
+.sector-section
+  display grid
+  grid-template-columns: repeat(6, minmax(10rem, 1fr));
+  grid-template-rows 35rem 30rem
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 3rem
+
+  &__chart
+  &__table
+    grid-column 1 / 5
+
+  &__list
+    grid-column 5 / -1
+
+  &__table
+    grid-row 2 / -1
+
+  &__card
+    grid-column 5 / -1
+    align-self start
+
+
+

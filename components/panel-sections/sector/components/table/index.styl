@@ -1,0 +1,41 @@
+.sector-table
+  display grid
+  font-size 1.4rem
+  background var(--white-color)
+  border-radius var(--bor-rad-card)
+  box-shadow var(--dark-subtle-shadow)
+  grid-column 1 / 5
+  grid-row 2 / -1
+  display flex
+  flex-direction column
+
+  &__tr
+    display grid
+    width 100%
+    grid-template-columns repeat(5, minmax(-webkit-min-content, 1fr))
+    grid-template-columns repeat(5, minmax(min-content, 1fr))
+    grid-gap 0.5rem
+    border-bottom var(--border-card)
+    flex 1 1 auto
+
+  &__td,
+  &__th
+    text-align left
+    display flex
+    align-items center
+    padding 1rem
+    font-size 1.4rem
+
+  &__td:not(:last-child),
+  &__th:not(:last-child)
+    border-right var(--border-card)
+
+  &__thead
+    background #ecedf0c2
+    border-top-left-radius var(--bor-rad-card)
+    border-top-right-radius var(--bor-rad-card)
+
+  &__th,
+  &__tr:last-child,
+  &__td_name
+    font-weight 450

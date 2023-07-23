@@ -1,0 +1,35 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade
+  &-enter-active
+  &-leave-active
+    transition .2s ease-out
+
+  &-enter-from
+  &-leave-to
+    opacity 0
+    transform translateY(10px)
+
+.roll
+  &-enter-active
+  &-leave-active
+    transition .2s ease-out
+
+  &-enter-from
+  &-leave-to
+    opacity 0
+    transform translateY(10px)
+
+.roll
+  &-enter-active
+  &-leave-active
+    transition var(--roll-transition, .2s ease)
+
+  &-enter-from
+    transform translateY(100%)
+
+  &-leave-to
+    transform translateY(-100%)
