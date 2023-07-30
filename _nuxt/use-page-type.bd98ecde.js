@@ -1,0 +1,1 @@
+import{u as n}from"./entry.4478c12f.js";import{u as a}from"./use-internalization.1d170f5d.js";const c=t=>{const{dict:r}=a(),{title:e,description:o}=r[t].meta;n({title:e,meta:[{name:"description",content:o},{property:"og:title",content:e},{property:"og:image",content:"/og-image.jpg"},{property:"og:description",content:o}],htmlAttrs:{"data-page-type":t}})};export{c as u};
