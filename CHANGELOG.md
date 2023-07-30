@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/WebSavva/thesis/compare/v1.0.0...v1.0.1) (2023-07-30)
+
+
+### Bug Fixes
+
+* .nojekyll is added into public folder to disable jekyll ([b9838c1](https://github.com/WebSavva/thesis/commit/b9838c1b65ad74d14fba0f25e44fa86c3ae298f3))
+
 ## 1.0.0 (2023-07-30)
 
 
