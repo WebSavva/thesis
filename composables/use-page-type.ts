@@ -14,6 +14,13 @@ export const usePageType = (type: string) => {
 
   const derivedHeadAttrs = {
     title,
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: $baseUrl.append('/favicon.ico'),
+      }
+    ],
     meta: [
       {
         name: 'description',
