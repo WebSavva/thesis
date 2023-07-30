@@ -4,21 +4,26 @@
   background var(--white-color)
   border-radius var(--bor-rad-card)
   box-shadow var(--dark-subtle-shadow)
-  grid-column 1 / 5
-  grid-row 2 / -1
   display flex
   flex-direction column
 
   &__tr
+    --col-count 5
+
     display grid
     width 100%
-    grid-template-columns repeat(5, minmax(-webkit-min-content, 1fr))
-    grid-template-columns repeat(5, minmax(min-content, 1fr))
+    grid-template-columns repeat(var(--col-count), minmax(5rem, 1fr))
     grid-gap 0.5rem
     border-bottom var(--border-card)
     flex 1 1 auto
 
-  &__td,
+    @media $max-lg
+      --col-count 4
+
+    @media $max-sm
+      --col-count 3
+
+  &__td
   &__th
     text-align left
     display flex
@@ -26,7 +31,18 @@
     padding 1rem
     font-size 1.4rem
 
-  &__td:not(:last-child),
+    &:last-child
+      @media $max-lg
+        display none
+
+    &:nth-last-child(2)
+      @media $max-sm
+        display none
+
+    @media $max-sm
+      padding .75rem
+
+  &__td:not(:last-child)
   &__th:not(:last-child)
     border-right var(--border-card)
 
@@ -36,6 +52,6 @@
     border-top-right-radius var(--bor-rad-card)
 
   &__th,
-  &__tr:last-child,
+  &__tr:last-child
   &__td_name
-    font-weight 450
+    font-weight 500

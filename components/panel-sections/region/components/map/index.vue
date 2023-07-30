@@ -9,7 +9,7 @@
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       class="map"
-      preserveAspectRation="none"
+      preserveAspectRatio="none"
       @mousemove="onMouseMove"
     >
       <template
@@ -38,13 +38,10 @@
       class="map__tooltip"
     >
       <template v-if="hoveredRegion">
-        <div
-          class="map__tooltip__content"
-          :key="hoveredRegion"
-        >
+        <div class="map__tooltip__content">
           <div class="map__tooltip__row-name">
             <img
-              :src="hoveredRegion.img"
+              :src="`/regions/${hoveredRegion.img}`"
               class="map__tooltip__flag"
             >
 
@@ -54,33 +51,33 @@
           </div>
 
           <div class="map__tooltip__row-indicator">
-            Средняя зарплата :
+            {{ $int.dict.panel.map.salary }}:
 
             <span>
               <span class="map__tooltip__salary">
                 {{ hoveredRegion.salary }}
-              </span> тыс. &#8381;
+              </span> {{ $int.dict.measurement.thousand }} &#8381;
             </span>
           </div>
 
           <div class="map__tooltip__row-indicator">
-            Количество занятых:
+            {{ $int.dict.panel.map.employed }}:
 
             <span>
               <span class="map__tooltip__employed">
                 {{ hoveredRegion.employed }}
-              </span> тыс. человек
+              </span> {{ $int.dict.measurement.thousand }}
             </span>
           </div>
 
           <div class="map__tooltip__row-indicator">
-            Суммарные потери:
+            {{ $int.dict.panel.map.costs }}:
 
             <span>
               <span class="map__tooltip__losses">
                 {{ hoveredRegion.costs }}
               </span>
-              млрд. &#8381;
+              {{ $int.dict.measurement.billion }} &#8381;
             </span>
           </div>
         </div>

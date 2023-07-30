@@ -2,6 +2,8 @@ import { defineComponent, type PropType } from '#imports';
 
 import { type SectorName, sectorSummaries } from '@/data';
 
+import { CARD_LABELS } from './config';
+
 export default defineComponent({
   name: 'SectorCard',
 
@@ -13,6 +15,10 @@ export default defineComponent({
   },
 
   computed: {
+    labels() {
+      return CARD_LABELS[this.$int.lang];
+    },
+
     summary() {
       const {
         totalSummaryByQuarter: { loss: losses },

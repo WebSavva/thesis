@@ -1,0 +1,18 @@
+.lang-switcher
+  display flex
+  align-items center
+  justify-content center
+
+  &__item
+    &:not(&_active)
+      opacity .5
+
+    & + &
+      margin-left var(--lang-switcher-gap, 1.5rem)
+
+    &__icon
+      border-radius 2px
+      display block
+      width var(--lang-switcher-icon-height, 1.75rem)
+      transform scaleX(1.3)
+      height auto

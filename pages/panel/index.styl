@@ -33,8 +33,17 @@
     transition all 0.1s
     z-index 100
 
+    @media $max-sm
+      max-height 6rem
+      overflow hidden
+      width 100%
+
     &_expanded
       width var(--sidebar-width-expanded)
+
+      @media $max-sm
+        width 100%
+        max-height 100vh
 
     &__head
       width 100%
@@ -42,6 +51,9 @@
       cursor pointer
       display flex
       background var(--interface-upper-color)
+
+      @media $max-sm
+        justify-content center
 
       &__text
         display none
@@ -56,6 +68,9 @@
 
         ^[0]__sidebar_expanded &
           display block
+
+          @media $max-sm
+            display none
 
       &__toggler
         width var(--sidebar-width)
@@ -92,11 +107,16 @@
           display grid
           white-space nowrap
 
+          @media $max-sm
+            display flex
+            padding-left 3rem
+
           ^[0]__sidebar_expanded &
             grid-template-columns 1fr 3fr
             grid-gap 0.2rem
 
-          &hover
+
+          &:hover
             background var(--selected-background)
             transform translateX(0.2rem)
 
@@ -104,6 +124,9 @@
             color var(--icon-color)
             font-size 2.5rem
             justify-self center
+
+            @media $max-sm
+              margin-right 1.5rem
 
           &__text
             display none
@@ -128,6 +151,10 @@
     width 100%
     padding-left var(--sidebar-width)
 
+    @media $max-sm
+      padding-left 0
+      padding-top 6rem
+
     &__head
       background var(--white-color)
       color var(--interface-side-color)
@@ -137,11 +164,18 @@
       align-items center
       box-shadow var(--dark-subtle-shadow)
 
+      @media $max-sm
+        display none
+
       &__text
-        font-size 1
+        font-size 2rem
         margin-left 4rem
         font-weight 300
         letter-spacing 0.3rem
+
+        @media $max-md
+          font-size 1.75rem
+          letter-spacing .1rem
 
       &__icon
         margin-right 3rem
@@ -149,6 +183,9 @@
         color var(--selected-color)
         animation spin 15s infinite linear
         transition all 0.3s linear
+
+        @media $max-md
+          font-size 2.5rem
 
         &:hover
           animation spin 5s infinite linear 2s

@@ -4,21 +4,21 @@
     @submit.prevent="onSubmit"
   >
     <div class="sector-list__head">
-        Отрасль экономики
+        {{  interfaceLabels.heading  }}
     </div>
 
     <div class="sector-list__body">
         <ul class="sector-list__body__items">
           <li
-            v-for="sectorName in sectorNames"
-            :key="sectorName"
+            v-for="{ id, name } in sectorItems"
+            :key="id"
             class="sector-list__body__items__item"
             :class="{
-              'sector-list__body__items__item_selected': selectedSectorId === sectorName,
+              'sector-list__body__items__item_selected': selectedSectorId === id,
             }"
-            @click="onSelect(sectorName)"
+            @click="onSelect(id)"
           >
-            {{ sectorName }}
+            {{ name }}
           </li>
         </ul>
     </div>
@@ -28,7 +28,7 @@
         type="submit"
         class="sector-list__footer__btn"
       >
-        Применить
+        {{  interfaceLabels.apply  }}
       </button>
     </div>
   </form>

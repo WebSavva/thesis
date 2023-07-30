@@ -187,220 +187,220 @@
     },
     {
       "date": "2020-04-01",
-      "realValue": 148.9,
-      "predictedValue": 149.9
+      "realValue": 148.89,
+      "predictedValue": 198.99
     },
     {
       "date": "2020-07-01",
-      "realValue": 183.1,
-      "predictedValue": 182.1
+      "realValue": 183.07,
+      "predictedValue": 202.05
     },
     {
       "date": "2020-10-01",
-      "realValue": 188.2,
-      "predictedValue": 191.2
+      "realValue": 188.15,
+      "predictedValue": 197.99
     }
   ],
   "food": [
     {
       "date": "2011-01-01",
-      "realValue": 155.4,
-      "predictedValue": 153.95
+      "realValue": 175.2,
+      "predictedValue": 175.2
     },
     {
       "date": "2011-04-01",
-      "realValue": 175.1,
-      "predictedValue": 164.47
+      "realValue": 176,
+      "predictedValue": 177
     },
     {
       "date": "2011-07-01",
-      "realValue": 186.8,
-      "predictedValue": 171.89
+      "realValue": 178.5,
+      "predictedValue": 179
     },
     {
       "date": "2011-10-01",
-      "realValue": 191,
-      "predictedValue": 176.66
+      "realValue": 179,
+      "predictedValue": 182
     },
     {
       "date": "2012-01-01",
-      "realValue": 162.3,
-      "predictedValue": 173.79
+      "realValue": 183,
+      "predictedValue": 186
     },
     {
       "date": "2012-04-01",
-      "realValue": 181.5,
-      "predictedValue": 175.07
+      "realValue": 184,
+      "predictedValue": 190
     },
     {
       "date": "2012-07-01",
-      "realValue": 196.8,
-      "predictedValue": 178.17
+      "realValue": 185.5,
+      "predictedValue": 192
     },
     {
       "date": "2012-10-01",
-      "realValue": 204.4,
-      "predictedValue": 181.45
+      "realValue": 190,
+      "predictedValue": 196
     },
     {
       "date": "2013-01-01",
-      "realValue": 167,
-      "predictedValue": 179.84
+      "realValue": 189,
+      "predictedValue": 201
     },
     {
       "date": "2013-04-01",
-      "realValue": 187.7,
-      "predictedValue": 180.63
+      "realValue": 190.5,
+      "predictedValue": 196
     },
     {
       "date": "2013-07-01",
-      "realValue": 202.3,
-      "predictedValue": 182.6
+      "realValue": 190.5,
+      "predictedValue": 200
     },
     {
       "date": "2013-10-01",
-      "realValue": 203.7,
-      "predictedValue": 184.35
+      "realValue": 190,
+      "predictedValue": 202
     },
     {
       "date": "2014-01-01",
-      "realValue": 166.7,
-      "predictedValue": 183.0
+      "realValue": 190,
+      "predictedValue": 199
     },
     {
       "date": "2014-04-01",
-      "realValue": 186.1,
-      "predictedValue": 183.22
+      "realValue": 189,
+      "predictedValue": 197
     },
     {
       "date": "2014-07-01",
-      "realValue": 201.4,
-      "predictedValue": 184.43
+      "realValue": 187,
+      "predictedValue": 194
     },
     {
       "date": "2014-10-01",
-      "realValue": 200.2,
-      "predictedValue": 185.42
+      "realValue": 186,
+      "predictedValue": 191
     },
     {
       "date": "2015-01-01",
-      "realValue": 162.8,
-      "predictedValue": 184.09
+      "realValue": 186,
+      "predictedValue": 188
     },
     {
       "date": "2015-04-01",
-      "realValue": 180,
-      "predictedValue": 183.86
+      "realValue": 184,
+      "predictedValue": 186
     },
     {
       "date": "2015-07-01",
-      "realValue": 198.8,
-      "predictedValue": 184.65
+      "realValue": 184,
+      "predictedValue": 183
     },
     {
       "date": "2015-10-01",
-      "realValue": 193.2,
-      "predictedValue": 185.07
+      "realValue": 180,
+      "predictedValue": 179
     },
     {
       "date": "2016-01-01",
-      "realValue": 151.9,
-      "predictedValue": 183.49
+      "realValue": 177,
+      "predictedValue": 175
     },
     {
       "date": "2016-04-01",
-      "realValue": 173.4,
-      "predictedValue": 183.04
+      "realValue": 177,
+      "predictedValue": 172
     },
     {
       "date": "2016-07-01",
-      "realValue": 191.5,
-      "predictedValue": 183.4
+      "realValue": 174.5,
+      "predictedValue": 170
     },
     {
       "date": "2016-10-01",
-      "realValue": 185.9,
-      "predictedValue": 183.51
+      "realValue": 175,
+      "predictedValue": 169
     },
     {
       "date": "2017-01-01",
-      "realValue": 150.9,
-      "predictedValue": 182.2
+      "realValue": 176,
+      "predictedValue": 167
     },
     {
       "date": "2017-04-01",
-      "realValue": 175.2,
-      "predictedValue": 181.93
+      "realValue": 177.5,
+      "predictedValue": 170
     },
     {
       "date": "2017-07-01",
-      "realValue": 199.9,
-      "predictedValue": 182.6
+      "realValue": 180,
+      "predictedValue": 174
     },
     {
       "date": "2017-10-01",
-      "realValue": 191.8,
-      "predictedValue": 182.93
+      "realValue": 184,
+      "predictedValue": 179
     },
     {
       "date": "2018-01-01",
-      "realValue": 161.2,
-      "predictedValue": 182.18
+      "realValue": 188,
+      "predictedValue": 183
     },
     {
       "date": "2018-04-01",
-      "realValue": 188.2,
-      "predictedValue": 182.38
+      "realValue": 190,
+      "predictedValue": 186
     },
     {
       "date": "2018-07-01",
-      "realValue": 216.4,
-      "predictedValue": 183.48
+      "realValue": 194,
+      "predictedValue": 189
     },
     {
       "date": "2018-10-01",
-      "realValue": 201.9,
-      "predictedValue": 184.05
+      "realValue": 194,
+      "predictedValue": 193
     },
     {
       "date": "2019-01-01",
-      "realValue": 167,
-      "predictedValue": 183.54
+      "realValue": 190,
+      "predictedValue": 194
     },
     {
       "date": "2019-04-01",
-      "realValue": 192.7,
-      "predictedValue": 183.8
+      "realValue": 214,
+      "predictedValue": 193
     },
     {
       "date": "2019-07-01",
-      "realValue": 220.4,
-      "predictedValue": 184.85
+      "realValue": 193,
+      "predictedValue": 205
     },
     {
       "date": "2019-10-01",
-      "realValue": 208,
-      "predictedValue": 185.49
+      "realValue": 185,
+      "predictedValue": 198
     },
     {
       "date": "2020-01-01",
-      "realValue": 171.3,
-      "predictedValue": 171.3
+      "realValue": 178,
+      "predictedValue": 194
     },
     {
       "date": "2020-04-01",
-      "realValue": 83.4,
-      "predictedValue": 83.4
+      "realValue": 141.15,
+      "predictedValue": 180.12
     },
     {
       "date": "2020-07-01",
-      "realValue": 175.5,
-      "predictedValue": 175.5
+      "realValue": 146.1,
+      "predictedValue": 180.06
     },
     {
       "date": "2020-10-01",
-      "realValue": 165,
-      "predictedValue": 165
+      "realValue": 132.79,
+      "predictedValue": 180.01
     }
   ],
   "finance": [
@@ -591,18 +591,18 @@
     },
     {
       "date": "2020-04-01",
-      "realValue": 1072.7,
-      "predictedValue": 1072.7
+      "realValue": 1116.32,
+      "predictedValue": 1093.48
     },
     {
       "date": "2020-07-01",
-      "realValue": 1155.9,
-      "predictedValue": 1155.9
+      "realValue": 1142.65,
+      "predictedValue": 1095.93
     },
     {
       "date": "2020-10-01",
-      "realValue": 1160,
-      "predictedValue": 1160
+      "realValue": 1170.06,
+      "predictedValue": 1098.39
     }
   ]
 }

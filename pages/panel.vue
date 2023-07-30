@@ -8,7 +8,7 @@
     >
       <div class="panel__sidebar__head">
         <div class="panel__sidebar__head__text">
-          Главное меню
+          {{  $int.dict.sidebar.mainMenuTitle  }}
         </div>
 
         <div
@@ -22,11 +22,12 @@
       <nav class="panel__sidebar__nav">
         <ul class="panel__sidebar__nav__menu">
           <li
-            v-for="{ icon, label, path } in MENU_ITEMS"
+            v-for="{ icon, label, path, external } in MENU_ITEMS"
             :key="path"
           >
             <NuxtLink
-              :to="path"
+              v-if="!external"
+              :href="path"
               class="panel__sidebar__nav__menu__item"
               exact-active-class="panel__sidebar__nav__menu__item_selected"
             >
@@ -39,6 +40,21 @@
                 {{ label }}
               </span>
             </NuxtLink>
+
+            <a
+              v-else
+              :href="path"
+              class="panel__sidebar__nav__menu__item"
+            >
+              <i
+                class="fas panel__sidebar__nav__menu__item__icon"
+                :class="`fa-${icon}`"
+              />
+
+              <span class="panel__sidebar__nav__menu__item__text">
+                {{ label }}
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -74,40 +90,46 @@
 </template>
 
 <script setup lang="ts">
-import { ref, useRoute, computed, watch } from '#imports';
+import { ref, useRoute, computed, watch, usePageType } from '#imports';
+import { NuxtLink } from '#components';
 
-import '~/assets/styles/panel.css';
+import { useInternalization } from '@/composables/use-internalization'
+
 import RegionSection from '@/components/panel-sections/region/index.vue';
 import SectorSection from '@/components/panel-sections/sector/index.vue';
 
 const $route = useRoute();
+const $int = useInternalization();
+
+usePageType('panel');
 
 const MENU_ITEMS = [
   {
     icon: 'shield-virus',
-    label: 'Стоимость локдауна',
+    label: $int.dict.sidebar.mapLinkName,
     id: 'region',
-    path: '/panel',
-    heading: 'Стоимость локдауна в РФ в 2020 году',
+    path: $int.hrefWithLang('/panel'),
+    heading: $int.dict.heading.map,
   },
   {
     icon: 'chart-line',
-    label: 'Отраслевой анализ',
+    label: $int.dict.sidebar.sectorLinkName,
     id: 'sector',
-    path: '/panel/sector',
-    heading: 'Отраслевой анализ потерь экономики РФ',
+    path: $int.hrefWithLang('/panel/sector'),
+    heading: $int.dict.heading.sector,
   },
   {
     icon: 'book-open',
-    label: 'Текст ВКР',
+    label: $int.dict.sidebar.thesisLinkName,
     id: 'thesis',
-    path: '/panel/thesis',
-    heading: 'Материалы ВКР',
+    path: $int.hrefWithLang('/panel/thesis'),
+    heading: $int.dict.heading.thesis,
   },
   {
     icon: 'chalkboard',
-    label: 'Презентация',
-    path: '/presentation',
+    label: $int.dict.sidebar.presentationLinkName,
+    path: $int.hrefWithLang('/presentation.html'),
+    external: true,
   },
 ];
 

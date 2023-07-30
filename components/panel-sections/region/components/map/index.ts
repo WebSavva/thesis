@@ -1,8 +1,10 @@
 import { defineComponent, type PropType } from '#imports';
 
-import { regions, type RegionObservation } from '@/data';
+import type { RegionObservation } from '@/data';
 import { round } from '@/utils/round';
+import { useRegions } from '@/composables/use-regions';
 import { isDefined } from '@/utils/is-defined';
+import { xlg } from '@/assets/styles/breakpoints.json';
 
 const MAIN_CONTENT_ID = 'main-content';
 
@@ -18,6 +20,12 @@ export default defineComponent({
 
   emits: ['update:activeRegion'],
 
+  setup() {
+    return {
+      regions: useRegions()
+    }
+  },
+
   data() {
     return {
       width: null as number | null,
@@ -29,13 +37,11 @@ export default defineComponent({
   },
 
   computed: {
-    regions: () => regions,
-
     sizeProvider() {
       const { tooltipX, tooltipY, height, width } = this;
       return {
-        // '--width': this.toPixels(width),
-        // '--height': this.toPixels(height),
+        '--width': this.toPixels(width),
+        '--height': this.toPixels(height),
         '--tooltip-x': this.toPixels(tooltipX! + 20),
         '--tooltip-y': this.toPixels(tooltipY),
       };
@@ -66,12 +72,12 @@ export default defineComponent({
 
       if (!mainContent) return;
 
-      if (window.innerWidth <= 800) {
-        this.width = mainContent.offsetWidth * 0.9;
-        this.height = this.width / 1.77;
+      if (window.innerWidth <= xlg) {
+        this.width = null;
+        this.height = null;
       } else {
-        this.width = mainContent.offsetWidth * 0.6;
-        this.height = mainContent.offsetHeight * 0.7;
+        this.width = mainContent.offsetWidth * 0.65;
+        this.height = mainContent.offsetHeight * 0.85;
         let ratio = +(this.width / this.height).toFixed(2);
 
         //adjusting to the appropriate ratio

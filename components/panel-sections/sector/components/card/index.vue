@@ -7,13 +7,13 @@
   >
     <div class="sector-card__head">
       <div class="sector-card__head__details">
-        Величина
+        {{  labels.title  }}
 
-        {{ areLossesPositive ? 'доходов' : 'потерь' }}
+        {{ areLossesPositive ? labels.profitHint : labels.lossHint }}
       </div>
 
       <div class="sector-card__head__label">
-        Период: I-IV кварталы 2020 года
+        {{ labels.period }}
       </div>
     </div>
 
@@ -25,7 +25,7 @@
 
         <div class="sector-card__details__item__text">
           <div class="sector-card__details__item__text__name">
-            Абсолютное значение
+            {{ labels.absolute }}
           </div>
 
           <span class="sector-card__details__item__text__value">
@@ -33,7 +33,7 @@
               {{
                 summary.losses
               }}
-            </span> млрд.
+            </span> {{  $int.dict.measurement.billion }}
 
             <i class="fas fa-ruble-sign" />
           </span>
@@ -47,7 +47,7 @@
 
         <div class="sector-card__details__item__text">
           <div class="sector-card__details__item__text__name">
-            Доля от ВВП 2019 года
+            {{  labels.share }}
           </div>
 
           <span class="sector-card__details__item__text__value">

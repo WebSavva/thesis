@@ -2,6 +2,8 @@ import { defineComponent, type PropType } from '#imports';
 
 import { sectorNames, type SectorName } from '@/data';
 
+import { SECTOR_LABELS, INTERFACE_LABELS } from './config';
+
 export default defineComponent({
   name: 'SectorList',
 
@@ -21,7 +23,16 @@ export default defineComponent({
   },
 
   computed: {
-    sectorNames: () => sectorNames,
+    sectorItems() {
+      return sectorNames.map((sectorName) => ({
+        id: sectorName,
+        name: SECTOR_LABELS[sectorName][this.$int.lang],
+      }));
+    },
+
+    interfaceLabels() {
+      return INTERFACE_LABELS[this.$int.lang];
+    },
   },
 
   methods: {

@@ -2,23 +2,23 @@
   <div class="sector-table">
     <div class="sector-table__tr sector-table__thead">
       <div class="sector-table__th">
-        {{ columnNames.quarter }}
+        {{ columnNames.quarter[$int.lang] }}
       </div>
 
       <div class="sector-table__th">
-        {{ columnNames.realValue }}
+        {{ columnNames.realValue[$int.lang] }}
       </div>
 
       <div class="sector-table__th">
-        {{ columnNames.predictedValue }}
+        {{ columnNames.predictedValue[$int.lang] }}
       </div>
 
       <div class="sector-table__th">
-        {{ columnNames.loss }}
+        {{ columnNames.loss[$int.lang] }}
       </div>
 
       <div class="sector-table__th">
-        {{ columnNames.quarterlyMeanValue }}
+        {{ columnNames.quarterlyMeanValue[$int.lang] }}
       </div>
     </div>
 
@@ -34,7 +34,7 @@
       class="sector-table__tr"
     >
       <div class="sector-table__td sector-table__td_name">
-        {{ columnNames[quarter] ? columnNames[quarter] : quarter }}
+        {{ columnNames[quarter] ? columnNames[quarter][$int.lang] : quarter }}
       </div>
 
       <div class="sector-table__td">

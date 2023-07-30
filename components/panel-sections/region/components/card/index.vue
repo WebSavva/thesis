@@ -7,7 +7,7 @@
 
       <div class="region-card__header__share">
         <span class="region-card__header__share__title">
-          Доля региона в общих затратах
+          {{ $int.dict.panel.card.heading }}
         </span>
 
         <span class="region-card__header__share__details">
@@ -33,7 +33,7 @@
     <div class="region-card__footer">
         <i class="fas fa-exclamation region-card__footer__icon" />
 
-        Суммарные потери составили 2% от ВВП 2019 года
+        {{ $int.dict.panel.card.hint }}
     </div>
   </div>
 </template>

@@ -1,9 +1,44 @@
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+html
+  font-family: var(--primary-font), sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media $min-xxxlg
+    font-size 80%
+
+  @media $max-xs
+    font-size: 55%
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol,
+h1,
+h3,
+h4 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .fade
+.fade-slide
   &-enter-active
   &-leave-active
     transition .2s ease-out
@@ -11,6 +46,10 @@
   &-enter-from
   &-leave-to
     opacity 0
+
+.fade-slide
+  &-enter-from
+  &-leave-to
     transform translateY(10px)
 
 .roll
@@ -33,3 +72,37 @@
 
   &-leave-to
     transform translateY(-100%)
+
+
+[data-page-type="index"]
+  --primary-font: "Russo One";
+  --secondary-font: "Open Sans";
+
+
+[data-page-type="panel"]
+  background #ecedf0
+
+  @media $max-sm
+    font-size
+
+  --page-background-color: #ecedf0;
+  --overlay-color: rgba(0, 0, 0, 0.3);
+  --interface-upper-color: #171717;
+  --interface-side-color: #1d2127;
+  --primary-font: "Open Sans";
+  --secondary-font: "Oswald";
+  --sidebar-width: 8rem;
+  --sidebar-width-expanded: 35rem;
+  --icon-color: #969fa8;
+  --header-menu-color: #dddfdb60;
+  --header-height: 6rem;
+  --selected-color: #28a745;
+  --selected-background: #4243446e;
+  --dark-subtle-shadow: 0 0 0 1px #0000001a
+  --white-color: #ffff;
+  --border-card: 1px solid rgba(0, 0, 0, 0.125);
+  --bor-rad-card: 0.5rem;
+  --card-header-background: rgba(0, 0, 0, 0.03);
+  --sector-list-width: 35rem;
+  --red-color: #ef4444;
+

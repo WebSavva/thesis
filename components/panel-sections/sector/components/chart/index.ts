@@ -8,8 +8,22 @@ import {
   watch,
 } from 'vue-demi';
 
-import { type SectorName, gpdSectors, sectorNames } from '@/data';
+import { type SectorName, gpdSectors } from '@/data';
+import { useInternalization } from '@/composables/use-internalization';
 import useChartJs from '@/composables/use-chart-js';
+
+const LABELS = {
+  en: {
+    gdp: 'Real GDP',
+    prediction: 'Prediction',
+    measurement: 'Bn. ₽',
+  },
+  ru: {
+    gdp: 'Реальный валовый продукт',
+    prediction: 'Прогноз',
+    measurement: 'Млрд. ₽',
+  }
+};
 
 export default defineComponent({
   name: 'SectorChart',
@@ -22,6 +36,14 @@ export default defineComponent({
   },
 
   setup(props) {
+    const {
+      lang
+    } = useInternalization();
+
+    const translatedLabels = computed(() => {
+      return LABELS[lang]
+    })
+
     const canvasRef = ref<HTMLCanvasElement | null>(null);
 
     const sectorTimeSerie = computed(() => {
@@ -60,17 +82,16 @@ export default defineComponent({
         labels,
         datasets: [
           {
-            label: 'Реальный валовый продукт',
+            label: translatedLabels.value.gdp,
             data: realValues,
             borderColor: '#fd4747',
             backgroundColor: '#ff9a9a',
           },
           {
-            label: 'Прогноз',
+            label: translatedLabels.value.prediction,
             data: predictedValues,
             borderColor: '#28A745',
             backgroundColor: '#80c590',
-            fontSize: 25,
           },
         ],
       };
@@ -82,7 +103,7 @@ export default defineComponent({
           elements: {
             point: {
               hoverRadius: 10,
-              radius: 2,
+              radius: 3,
             },
             line: {
               tension: 0.15, // disables bezier curves
@@ -97,7 +118,7 @@ export default defineComponent({
           },
           font: {
             family: 'Open Sans',
-            size: 25,
+            size: 16,
           },
           scales: {
             x: {
@@ -110,10 +131,10 @@ export default defineComponent({
             y: {
               title: {
                 display: true,
-                text: 'Млрд.рублей',
+                text: translatedLabels.value.measurement,
                 font: {
                   family: 'Open Sans',
-                  size: 25,
+                  size: 16,
                 },
               },
             },

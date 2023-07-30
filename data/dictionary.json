@@ -1,0 +1,458 @@
+{
+  "ru": {
+    "measurement": {
+      "thousand": "тыс.",
+      "billion": "млрд."
+    },
+    "index": {
+      "meta": {
+        "title": "Главная страница",
+        "description": "Веб-визуализация исследования методов оценки экономических последствий COVID-19"
+      },
+      "heading": "Методы оценки экономических последствий COVID-19",
+      "panel": "Итоги",
+      "presentation": "Презентация"
+    },
+    "sidebar": {
+      "mainMenuTitle": "Главное меню",
+      "mapLinkName": "Стоимость локдауна",
+      "sectorLinkName": "Отраслевой анализ",
+      "thesisLinkName": "Текст ВКР",
+      "presentationLinkName": "Презентация"
+    },
+    "heading": {
+      "map": "Стоимость локдауна в РФ в 2020 году",
+      "sector": "Отраслевой анализ потерь экономики РФ",
+      "thesis": "Материалы ВКР"
+    },
+    "panel": {
+      "meta": {
+        "title": "Итоги",
+        "description": "Итоги исследования методов оценки экономических последствий COVID-19"
+      },
+      "map": {
+        "salary": "Средняя зарплата",
+        "employed": "Количество занятых",
+        "costs": "Суммарные потери"
+      },
+      "card": {
+        "heading": "Доля региона в общих затратах",
+        "hint": "Суммарные потери составили 2% от ВВП 2019 года"
+      }
+    },
+    "presentation": {
+      "meta": {
+        "title": "Презентация",
+        "description": "Презентация результатов исследования методово оценки экономических последствий COVID-19"
+      },
+      "common": {
+        "where": "где",
+        "totalCosts": "Суммарные потери",
+        "totalIncome": "Суммарные доход"
+      },
+      "slide1": {
+        "title": "Инструментальные и математические методы оценки экономических последствий"
+      },
+      "slide2": {
+        "title": "Актуальность исследования"
+      },
+      "slide3": {
+        "object": {
+          "title": "Объект",
+          "detail": "оценка экономических последствий COVID-19"
+        },
+        "subject": {
+          "title": "Предмет",
+          "detail": "методы оценки экономических последствий COVID-19"
+        },
+        "goal": {
+          "title": "Цель",
+          "detail": "изучение методов оценки экономических последствий COVID-19"
+        }
+      },
+      "slide4": {
+        "title": "Задачи исследования"
+      },
+      "slide5": {
+        "title": "Поиск и анализ литературных источников",
+        "search": "Поиск литературных источников для исследования",
+        "estimation": "Оценка релевантности найденных источников методом линейной свертки и их отбор",
+        "review": "Обзор отобранных литературных источников"
+      },
+      "slide6": {
+        "title": "Оценивание экономических последствий COVID-19",
+        "selection": "Выбор методов и формулирование задачи",
+        "collection": "Сбор данных для проведения оценки",
+        "modelling": "Построение модели оценивания",
+        "interpretation": "Интерпретация и обсуждение полученных результатов"
+      },
+      "slide7": {
+        "title": "Оценка релевантности научных публикаций",
+        "formula": {
+          "x_k": "альтернатива",
+          "k": "номер\\:альтернативы,",
+          "m": "количество\\:критериев,\\:по\\:которым\\:производится\\:оценка",
+          "f_i": "функция\\:балльной\\:оценки\\:альтернативы",
+          "i": "по\\:критерию",
+          "u_i": "вес\\:i-го\\:критерия,\\:принимающий\\:значение\\\\ &от\\:0\\:до\\:1\\:(сумма\\:всех\\:весов\\:равна\\:1)."
+        }
+      },
+      "slide8": {
+        "title": "Отобранные научные публикации",
+        "neuralNetwork": "Многослойная искусственная нейронная сеть для прогнозирования ВВП",
+        "probability": "Вероятностный подход к оценке экономических последствий COVID-19",
+        "ols": "Метод OLS оценки влияния нефармакологических вмешательств",
+        "pep": "Компартментальная модель PEP выбора оптимальной политики борьбы с COVID-19",
+        "illnessCost": "Анализ стоимости заболевания COVID-19 в КНР",
+        "excess": "Метод совокупного превышения для оценки экономического эффекта COVID-19 на сферу розничной торговли Великобритании"
+      },
+
+      "slide10": {
+        "title": "Pandemic Economic Policy модель"
+      },
+
+      "slide11": {
+        "title": "Экономическое расширение PEP модели",
+        "formula": {
+          "b_g": "показатель\\:роста\\:ВВП\\:в\\:процентах\\:в\\:начале\\:пандемии",
+          "p_i": "коэффициент\\:влияния\\:пандемии\\:на\\:ВВП",
+          "shares": "доля\\:индивидов,\\:помещенных\\:в\\:карантин\\\\ &на\\:различной\\:стадии\\:заболевания,\\,а\\:также\\:доля\\:инфицированных\\:индивидов",
+          "multipliers": "коэффициенты,\\:определяющие\\:влияния\\:доли\\:находящихся\\\\ &в\\:карантине \\:а\\:также\\:инфицированных\\:индивидов"
+        }
+      },
+      "slide12": {
+        "title": "Кривые Безье для NPI"
+      },
+      "slide13": {
+        "title": "Нахождение оптимального времени принятия мер"
+      },
+      "slide14": {
+        "title": "Метод анализа стоимости заболевания"
+      },
+      "slide15": {
+        "title": "Прямые медицинские затраты",
+        "formula": {
+          "p_x": "стоимость\\:одного\\:медицинского\\:компонента\\\\ &с\\:учетом\\:вероятности\\:использования",
+          "i_x": "количество\\:пациентов,\\:нуждающихся\\&в\\:компоненте",
+          "x": "тип\\:медицинского\\:компонента."
+        }
+      },
+      "slide16": {
+        "title": "Прямые немедицинские затраты",
+        "formula": {
+          "e": "причина,\\:по\\:которой\\:человек\\:был\\:помещен\\\\ &в\\:карантин,",
+          "r": "номер\\:региона",
+          "n_e": "количество\\:человек,\\:помещенных\\:в\\:карантин",
+          "d_e": "длительность\\:карантина\\:в\\:зависимости\\\\&от\\:причины\\:помещения"
+        }
+      },
+      "slide17": {
+        "title": "Потери производительности труда",
+        "formula": {
+          "i_r": "средняя\\:заработная\\:плата\\:в \\:день\\:в\\:регионе,",
+          "f_r": "уровень\\:занятости\\:в\\:регионе,",
+          "h_r": "среднее\\:количество\\:дней,потерянное\\\\&в\\:результате\\:введения\\:локдауна,",
+          "q_r": "численность\\:населения\\:региона."
+        }
+      },
+      "slide18": {
+        "title": "Метод совокупного превышения",
+        "formula": {
+          "s_t": "величина\\:продаж\\:в\\:момент\\:времени\\:t",
+          "c": "индикаторная\\:переменная,обозначающая\\\\&наличие\\:эффекта\\:COVID−19."
+        }
+      },
+      "slide19": {
+        "title": "Оценивание последствий COVID-19 для экономики России"
+      },
+      "slide20": {
+        "title": "Уровни оценивания",
+        "levels": {
+          "top": "Уровень всей экономики",
+          "middle": "Отраслевой уровень",
+          "bottom": "Подотраслевой уровень"
+        }
+      },
+      "slide21": {
+        "title": "Формула расчета стоимости локдауна",
+        "formula": {
+          "l_r": "доля\\:занятых,\\:работавших\\:во\\:время\\:локдауна"
+        }
+      },
+      "slide22": {
+        "abs": "3 триллиона 267 миллиардов",
+        "share": "3% от ВВП 2019 года"
+      },
+      "slide23": {
+        "title": "Наиболее пострадавшие регионы"
+      },
+      "slide24": {
+        "abs": "-120.14 миллиардовв",
+        "share": "12% от значения 2019 года"
+      },
+      "slide25": {
+        "abs": "-78.91 миллиардов",
+        "share": "9.8% от значения 2019 года"
+      },
+      "slide26": {
+        "abs": "141.24 миллиардов",
+        "share": "3% от значения 2019 года"
+      },
+      "slide27": {
+        "abs": "-776 миллиардов",
+        "share": "6% от значения 2019 года"
+      },
+      "slide28": {
+        "abs": "-1 триллион 566 миллиардов",
+        "share": "11% от значения 2019 года"
+      },
+      "slide29": {
+        "title": "Заключение",
+        "details": "В целом цель исследования была достигнута. Удалось как изучить основные методы оценки, так и осуществить оценивание экономических последствий для РФ за 2020 год.",
+        "thanks": "Спасибо за внимание !",
+        "author": {
+          "title": "Автор",
+          "detail": "Прокофьев Савва Сергеевич"
+        },
+        "advisor": {
+          "title": "Научный руководитель",
+          "detail": "доктор физико-математических наук, профессор Юрков Александр Васильевич"
+        },
+        "reviewer": {
+          "title": "Рецензент",
+          "detail": "старший менеджер Центра стратегического анализа производственной конфигурации ООО «Институт Гипроникель», Мелешкин Михаил Игоревич"
+        },
+        "year": "Год",
+        "extraMaterials": "Дополнительные материалы"
+      }
+    }
+  },
+  "en": {
+    "measurement": {
+      "thousand": "th.",
+      "billion": "bn."
+    },
+    "index": {
+      "meta": {
+        "title": "Main page",
+        "description": "Web-visualization of the research of methods for assessing the ecnomic impact of COVID-19"
+      },
+      "heading": "Methods to estimate the economic impact of COVID-19",
+      "panel": "Summary",
+      "presentation": "Presentation"
+    },
+    "sidebar": {
+      "mainMenuTitle": "Navigation",
+      "mapLinkName": "Lockdown costs",
+      "sectorLinkName": "Sector-based analysis",
+      "thesisLinkName": "Thesis",
+      "presentationLinkName": "Presentation"
+    },
+    "heading": {
+      "map": "Lockdown costs of Russia in 2020",
+      "sector": "Sector-based analysis of economic losses of the Russian economy",
+      "thesis": "Thesis-related materials"
+    },
+    "panel": {
+      "meta": {
+        "title": "Summary",
+        "description": "Summary of the research of methods for assessing economic effects of COVID-19"
+      },
+      "map": {
+        "salary": "Average salary",
+        "employed": "Number of employed",
+        "costs": "Total costs"
+      },
+      "card": {
+        "heading": "Region's share of total costs",
+        "hint": "Total costs made up 2 % of GDP in 2019"
+      }
+    },
+    "presentation": {
+      "meta": {
+        "title": "Presentation",
+        "description": "Presentation of results of the research of methods for assessing economic effects of COVID-19"
+      },
+      "common": {
+        "where": "where",
+        "totalCosts": "Total costs",
+        "totalIncome": "Total income"
+      },
+      "slide1": {
+        "title": "Instrumental and mathematical methods to assess the economic impact of"
+      },
+      "slide2": {
+        "title": "Research relevance"
+      },
+      "slide3": {
+        "object": {
+          "title": "Objec",
+          "detail": "assessment of the economic impact of COVID-19"
+        },
+        "subject": {
+          "title": "Subject",
+          "detail": "methods to assess the economic impact of COVID-19"
+        },
+        "goal": {
+          "title": "Objective",
+          "detail": "research of methods to assess the economic impact of COVID-19"
+        }
+      },
+      "slide4": {
+        "title": "Research objectives"
+      },
+      "slide5": {
+        "title": "Literature review",
+        "search": "Search of relevant literature",
+        "estimation": "Assessment of the relevance of the found literature using the method of linear convolution and selection",
+        "review": "Review of the selected literature sources"
+      },
+      "slide6": {
+        "title": "Assessment of the economic impact of COVID-19",
+        "selection": "Selection of methods and problem formulation",
+        "collection": "Data collection",
+        "modelling": "Modelling",
+        "interpretation": "Interpretation"
+      },
+      "slide7": {
+        "title": "Estimation of the relevance of the literature sources",
+        "formula": {
+          "x_k": "an\\:alternative",
+          "k": "number\\:of\\:an\\:alternative",
+          "m": "number\\:of\\:criteria,\\:required\\:for\\:assessment",
+          "f_i": "function\\:of\\:assessment\\:of\\:an\\:alternative",
+          "i": "based\\:upon\\:criterion",
+          "u_i": "weight\\:of\\:the\\:i-th\\:criterion\\:that\\:has\\:value\\\\ &between\\:0\\:and\\:1"
+        }
+      },
+      "slide8": {
+        "title": "Selected scientific publications",
+        "neuralNetwork": "Multilayer artificial neural network for GDP prediction",
+        "probability": "Probability-based approach to assess economic effects of COVID-19",
+        "ols": "OLS-based method for assessing impact of non-pharmaceutical interventions",
+        "pep": "Compartmental PEP Model for selecting optimal COVID-19 mitigation policies",
+        "illnessCost": "COVID-19 illness cost analysis in China",
+        "excess": "Aggregate excess method for assessing the economic impact of COVID-19 on the retail sector of the United Kingdom"
+      },
+
+      "slide10": {
+        "title": "Pandemic Economic Policy Model"
+      },
+
+      "slide11": {
+        "title": "Economic extension of the PEP model",
+        "formula": {
+          "b_g": "GDP\\:growth\\:indicator\\:at\\:the\\:beginning\\:of\\:pandemic",
+          "p_i": "coefficients\\:of\\:the\\:pandemic\\:impact\\:on\\:GDP",
+          "shares": "share\\:of\\:quarantined\\:individuals,\\:\\\\ &at\\:any\\:stage\\:of\\:virus\\:development,\\:\\, as\\:well\\:as\\:share\\:of\\:the\\:infected",
+          "multipliers": "coefficients\\:which\\:define\\:the\\:impact\\:of\\:the\\:quarantined\\:and\\:infected"
+        }
+      },
+      "slide12": {
+        "title": "Bezier Curves for NPI"
+      },
+      "slide13": {
+        "title": "Search of the optimal time to take measures"
+      },
+      "slide14": {
+        "title": "Cost of Illness Analysis"
+      },
+      "slide15": {
+        "title": "Direct medical costs",
+        "formula": {
+          "p_x": "price\\:of\\:a\\:medical\\:component\\\\ &given\\:its\\:usage\\:likelihood",
+          "i_x": "number\\:the\\:patiens\\:who\\:need\\:a\\:component",
+          "x": "type\\:of\\:a\\:component"
+        }
+      },
+      "slide16": {
+        "title": "Direct non-medical costs",
+        "formula": {
+          "e": "cause\\:of\\:quarantine",
+          "r": "region's\\:number",
+          "n_e": "number\\:of\\:the\\:quarantined\\:individuals",
+          "d_e": "duration\\:of\\:the\\:quarantine\\:depending\\:on\\:its\\:causes"
+        }
+      },
+      "slide17": {
+        "title": "Labour productivity losses",
+        "formula": {
+          "i_r": "average\\:daily\\:salary,",
+          "f_r": "employment\\:rate,",
+          "h_r": "average\\:number\\:of days\\:lost\\:due\\:to\\:imposed\\:lockdown,",
+          "q_r": "population\\:size,"
+        }
+      },
+      "slide18": {
+        "title": "Aggregate excess method",
+        "formula": {
+          "s_t": "sales\\:volume\\:at\\:t\\:point",
+          "c": "indicator\\:of\\:the\\:impact\\:of\\:COVID−19"
+        }
+      },
+      "slide19": {
+        "title": "Assessment of economic impact of COVID-19 on the Russian economy"
+      },
+      "slide20": {
+        "title": "Assessment levels",
+        "levels": {
+          "top": "Economy-wide",
+          "middle": "Sector",
+          "bottom": "Subsector"
+        }
+      },
+      "slide21": {
+        "title": "Formula of lockdown costs calculation",
+        "formula": {
+          "l_r": "share\\:of\\:the\\:employees\\:who\\:worked\\:during\\:lockdown"
+        }
+      },
+      "slide22": {
+        "abs": "3 trillion 267 billion",
+        "share": "3% of the GDP in 2019"
+      },
+      "slide23": {
+        "title": "The most affected regiosn"
+      },
+      "slide24": {
+        "abs": "-120.14 billion",
+        "share": "12% of the GDP in 2019"
+      },
+      "slide25": {
+        "abs": "-78.91 billion",
+        "share": "9.8% of the GDP in 2019"
+      },
+      "slide26": {
+        "abs": "141.24 billion",
+        "share": "3% of the GDP in 2019"
+      },
+      "slide27": {
+        "abs": "-776 billion",
+        "share": "6% of the GDP in 2019"
+      },
+      "slide28": {
+        "abs": "-1 trillion 566 billion",
+        "share": "11% of the GDP in 2019"
+      },
+      "slide29": {
+        "title": "Conclusion",
+        "details": "On the whole, the goal of this research has been accomplished. As a result, research of the key methods of assessment and their application to estimate the economic impact of COVID-19 in 2020 have been completed",
+        "thanks": "Thank you for you attention !",
+        "author": {
+          "title": "Author",
+          "detail": "Prokofev Savva"
+        },
+        "advisor": {
+          "title": "Academic advisor",
+          "detail": "Yurkov Vasiliy, PhD in Mathematics"
+        },
+        "reviewer": {
+          "title": "Reviewer",
+          "detail": "Meleshkin Mikjail, the CEO of the strategic analysis centre of industrial configuration \"Institution of Hypernickel\""
+        },
+        "year": "Year",
+        "extraMaterials": "Extra materials"
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 .regions-table
-  grid-column 2 / -1
   border-radius var(--bor-rad-card)
   box-shadow var(--dark-subtle-shadow)
   display flex
@@ -12,6 +11,10 @@
     background #5c6877
     border-top-left-radius var(--bor-rad-card)
     border-top-right-radius var(--bor-rad-card)
+    user-select none
+
+    @media $max-xs
+      font-size .9em
 
     &__sort
       padding 0.3rem
@@ -36,11 +39,10 @@
   &__row
     color #808080
     font-weight 400
-    height 8rem
     cursor pointer
     background-color var(--white-color)
     font-weight 300
-    padding 0.5rem 1rem
+    padding .75rem 1rem
 
     &:nth-child(2n)
       background-color #f8f6ff

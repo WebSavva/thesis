@@ -60,7 +60,7 @@ const deriveRegionColorByCostValue = (costs: number) => {
 };
 
 export const regions = rawRegions.map(
-  ({ employed, salary, regionName: name, rusCode, img, isoCode, paths }) => {
+  ({ employed, salary, name, rusCode, img, isoCode, paths }) => {
     const costs = round((employed * salary) / 1e3);
 
     return {
@@ -77,9 +77,4 @@ export const regions = rawRegions.map(
     };
   }
 );
-
-export const regionCostsSum = round(
-  regions.reduce((ac, { costs }) => ac + costs, 0)
-);
-
 export type RegionObservation = (typeof regions)[number];

@@ -1,0 +1,8 @@
+$breakpoints = json('./breakpoints.json', { hash: true })
+
+for $key, $value in $breakpoints
+  $max-media = unquote('(max-width: ' + ($value - 1) + 'px)')
+  $min-media = unquote('(min-width: ' + $value + 'px)')
+
+  define('$max-' + $key, $max-media, true)
+  define('$min-' + $key, $min-media, true)

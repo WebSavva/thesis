@@ -29,30 +29,48 @@
 >
 import { ref, definePageMeta } from '#imports';
 
+import { useInternalization } from '@/composables/use-internalization';
+
+const {
+  lang,
+} = useInternalization();
+
 definePageMeta({
   pageTransition: {
-    name: 'fade',
+    name: 'fade-slide',
     mode: 'out-in',
   }
 });
 
-const THESIS_DOCUMENTS = [
+const THESIS_DOCUMENTS = ([
   {
     id: 'thesis',
     src: '/thesis.pdf',
-    name: 'Текст ВКР',
+    name: {
+      ru: 'Текст ВКР',
+      en: 'Thesis',
+    },
   },
   {
     id: 'mentor',
     src: '/mentorReview.pdf',
-    name: 'Отзыв научного руководителя А.В.Юркова',
+    name: {
+      ru: 'Отзыв научного руководителя А.В.Юркова',
+      en: 'Review of the academic advisor Aleksandr Yurkov',
+    },
   },
   {
     id: 'employer',
     src: '/employerReview.pdf',
-    name: 'Отзыв рецензента М.И.Мелешкина',
+    name: {
+      ru: 'Отзыв научного руководителя А.В.Юркова',
+      en: 'Review of the reviewer Mikhail Meleshkin',
+    },
   },
-];
+]).map(item => ({
+  ...item,
+  name: item.name[lang],
+}));
 
 const activeDocument = ref<typeof THESIS_DOCUMENTS[number]>(THESIS_DOCUMENTS[0]);
 

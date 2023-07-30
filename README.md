@@ -1,63 +1,13 @@
-# Nuxt 3 Minimal Starter
+# Website for my thesis
+By the time I wrote my thesis, I decided to develop a interactive website in order to present the results of my research in user friendly and interactive fashion. But the implementation of yet another shallow-looking website was not desirable. Instead, I made an attempt to create something authentic and noticeable.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Used technologies
+* Nuxt.js (JS framework to build full-stack applications)
+* Reveal.js (JS framework that allows to create awesome presentations)
+* Chart.js (chart library)
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Features
+* Interactive SVG map of the Russian Federation
+* Dashboard that sheds the light on the scale of industries' economic losses
+* Lively animated presentation with vivid functionality
+* Text of my thesis as well as reviews are provied in the special section

@@ -14,7 +14,7 @@ export type SummaryByQuarters = Array<{
 
 export class SectorAnalyzer {
   public static analyze(observations: SectorObservation[]) {
-    const firstQuarterDate = new Date('2020-01-01');
+    const firstQuarterDate = new Date('2020-04-01');
 
     const observations2020 = observations.filter(
       ({ date }) => date >= firstQuarterDate
@@ -68,7 +68,7 @@ export class SectorAnalyzer {
       const quarterlyMeanValue = round(avg(quarterRealValuesBefore2019));
 
       summaryByQuarters.push({
-        quarter: `Q${i + 1}`,
+        quarter: `Q${i + 2}`,
         realValue,
         predictedValue,
         loss,

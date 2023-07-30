@@ -9,7 +9,7 @@ import SectorSection from '@/components/panel-sections/sector/index.vue';
 
 definePageMeta({
   pageTransition: {
-    name: 'fade',
+    name: 'fade-slide',
     mode: 'out-in',
   }
 })

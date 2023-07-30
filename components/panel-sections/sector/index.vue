@@ -1,9 +1,10 @@
 <template>
   <div class="sector-section">
-    <SectorChart
-      :activeSectorId="activeSectorId"
-      class="sector-section__chart"
-    />
+    <div class="sector-section__chart">
+      <SectorChart
+        :activeSectorId="activeSectorId"
+      />
+    </div>
 
     <SectorList
       v-model:activeSectorId="activeSectorId"

@@ -1,12 +1,37 @@
 .region-section
   display grid
-  grid-template-columns 65% 30%
+  grid-template-columns calc(70% - 2rem) 30%
   grid-template-rows minmax(30rem, calc(80vh - 13rem)) 13rem
-  grid-column-gap 5rem
+  grid-column-gap 2rem
+
+  @media $max-xlg
+    grid-template-columns 1fr
+    grid-template-rows auto 30rem auto
 
   &__map
     grid-column 1 / 2
     grid-row 1 / -1
 
-  // &__table
-  // &__card
+    @media $max-xlg
+      grid-column 1 / -1
+      grid-row 1 / 2
+
+
+  &__table
+    @media $max-xlg
+      @media $min-sm
+        width 80%
+
+  &__card
+    align-self start
+
+  &__card
+  &__table
+    grid-column 2 / -1
+
+    @media $max-xlg
+      grid-column 1 / -1
+
+      @media $min-sm
+        min-width 50rem
+        justify-self center

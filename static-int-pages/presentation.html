@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reveal.css">
+    <title>{{ meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <meta property="og:title" content="{{ neta.title }}">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:description" content="{{ meta.description }}">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-video="/second-back.mp4"
+          data-background-video-loop
+          data-background-video-muted
+          data-background-opacity="0.5"
+        >
+          <h1 style="font-size: 50px; text-align: left">
+            {{ slide1.title }}
+             <span style="color: rgb(240, 40, 40)">COVID-19</span>
+          </h1>
+        </section>
+
+        <section
+          data-background-video="/market-selloff.mp4"
+          data-background-video-loop
+          data-background-video-muted
+          data-background-opacity="0.2"
+        >
+          <h1
+            style="
+              font-size: 50px;
+              color: white;
+              text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+                0px 8px 13px rgba(0, 0, 0, 0.1),
+                0px 18px 23px rgba(0, 0, 0, 0.1);
+            "
+          >
+            {{ slide2.title }}
+          </h1>
+        </section>
+
+        <section>
+          <div id="purpose">
+            <div class="fragment fade-up">
+              <h3 style="color: rgb(145, 142, 142)">{{ slide3.object.title }}:</h3>
+              <span class="purpose-small"
+                >{{ slide3.object.detail }}</span
+              >
+            </div>
+            <div class="fragment fade-up">
+              <h3 style="color: rgb(145, 142, 142)">{{ slide3.subject.title }}:</h3>
+              <span class="purpose-small"
+                >{{ slide3.subject.detail }}</span
+              >
+            </div>
+            <div class="fragment fade-up">
+              <h3 style="color: rgb(145, 142, 142)">{{ slide3.goal.title }}:</h3>
+              <span class="purpose-small"
+                >{{ slide3.goal.detail }}</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <section
+            data-background-image="/tasks-back.jpg"
+            data-background-opacity=".2"
+          >
+            <h3>{{ slide4.title }}</h3>
+          </section>
+
+          <section>
+            <h3>{{ slide5.title }}</h3>
+
+            <ul style="font-size: 34px">
+              <li class="fragment fade-right">
+                {{ slide5.search }}
+              </li>
+              <li class="fragment fade-right">
+                {{ slide5.estimation }}
+              </li>
+              <li class="fragment fade-right">
+                {{ slide5.review }}
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>{{ slide6.title }}</h3>
+            <ul style="font-size: 34px">
+              <li class="fragment fade-right">
+                {{ slide6.selection }}
+              </li>
+              <li class="fragment fade-right">
+                {{ slide6.collection }}
+              </li>
+              <li class="fragment fade-right">
+                {{ slide6.modelling }}
+              </li>
+              <li class="fragment fade-right">
+                {{ slide6.collection }}
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h5>{{ slide7.title }}</h5>
+          <p class="r-fit-text" style="color: rgb(255, 255, 255)">
+            \begin{aligned} y_{k} = \sum_{i\, =\, 1}^{m} u_{i} f_{i}(x_{k}),\\
+            \end{aligned} \begin{align*} & {{ common.where }}\\ & x_{k} - {{ slide7.formula.x_k }}, \\ & k
+            - {{ slide7.formula.k }}, \\ &m -
+            {{ slide7.formula.m }},\\ & f_{i}
+            - {{ slide7.formula.f_i }}\:x_{k}\:{{ slide7.formula.i }}\:i,\\ & u_{i} -
+            {{ slide7.formula.u_i }}.\\ \end{align*}
+          </p>
+          <p></p>
+        </section>
+
+        <section data-auto-animate>
+          <h4>{{ slide8.title }}</h4>
+          <ul class="r-fit-text">
+            <li style="margin-bottom: 10px">
+              {{ slide8.neuralNetwork }}
+            </li>
+            <li style="margin-bottom: 10px">
+              {{ slide8.probability }}
+            </li>
+            <li style="margin-bottom: 10px">
+              {{ slide8.ols }}
+            </li>
+            <li style="margin-bottom: 10px">
+              {{ slide8.pep }}
+            </li>
+            <li style="margin-bottom: 10px">
+              {{ slide8.illnessCost }}
+            </li>
+            <li style="margin-bottom: 10px">
+              {{ slide8.excess }}
+            </li>
+          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h4>{{ slide8.title }}</h4>
+          <ul class="r-fit-text">
+            <li style="margin-bottom: 10px; color: #28a745">
+              {{ slide8.ols }}
+            </li>
+            <li style="margin-bottom: 10px; color: #28a745">
+              {{ slide8.illnessCost }}
+            </li>
+            <li style="margin-bottom: 10px; color: #28a745">
+              {{ slide8.excess }}
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <section data-background-color="white" data-transition="slide">
+            <h3>{{ slide10.title }}</h3>
+            <img src="/PEP_1.png" />
+          </section>
+
+          <section data-background-color="white">
+            <h3>{{ slide11.title }}</h3>
+            <p class="r-fit-text">
+              \begin{aligned} GDP' = b_{g} -
+              p_{i}\,(\,p_{q\,i}\,S_{q}\:+\:e_{q\,i}\,E_{q}\:+\:i_{i}\,I\:+\:i_{q\,i}\,I_{q}\,),\\
+              \end{aligned} \begin{align*} & {{ common.where }}\\ & b_{g} -
+              {{ slide11.formula.b_g }},\\ &
+              p_{i} - {{ slide11.formula.p_i }},\\
+              &S_{q},\,E_{q},\,I,\,I_{q} -
+              {{ slide11.formula.shares }},\\ &
+              p_{q\,i},\,e_{q\,i},\,i_{i},\,i_{q\,i} - {{ slide11.formula.multipliers}}\\ \end{align*}
+            </p>
+            <p></p>
+          </section>
+
+          <section data-background-color="white" data-transition="slide">
+            <h4>{{ slide12.title }}</h4>
+            <img src="/PEP_2.png" />
+          </section>
+
+          <section data-background-color="white" data-transition="slide">
+            <div class="r-stack">
+              <h2 class="fragment fade-out current-visible">
+                {{ slide13.title }}
+              </h2>
+              <img class="fragment fade-in" src="/PEP_3.png" />
+              <img class="fragment fade-in" src="/PEP_4.png" />
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section
+            data-background-video="/illness-cost-back.mp4"
+            data-background-video-loop
+            data-background-video-muted
+            data-background-opacity=".4"
+          >
+            <h2>{{ slide14.title }}</h2>
+          </section>
+
+          <section
+            data-background-image="/illness-cost-back.jpg"
+            data-background-opacity=".5"
+          >
+            <h3>{{ slide15.title }}</h3>
+            <p class="r-fit-text">
+              \begin{aligned} C = \sum_{x}\,p_{x}\,i_{x}\\ \end{aligned}
+              \begin{align*} & {{ common.where }}\\ & p_{x} - {{ slide15.formula.p_x }},\\ &i_{x} -
+              {{ slide15.formula.i_x }},\\ &x -
+              {{ slide15.formula.x }}\\ \end{align*}
+            </p>
+          </section>
+
+          <section
+            data-background-image="/illness-cost-back.jpg"
+            data-background-opacity=".5"
+          >
+            <h6>{{ slide16.title }}</h6>
+            <p class="r-fit-text">
+              \begin{aligned} TQC = \sum_{r}\sum_{e}\,75\,w_{r}\,d_{e}\,n_{e},\\
+              \end{aligned} \begin{align*} & {{ common.where }}\\ & e -
+              {{ slide16.formula.e }},\\ &r
+              - {{ slide16.formula.r }},\\ &n_{e} -
+              {{ slide16.formula.n_e }},\\ &d_{e} -
+              {{ slide16.formula.d_e }} \end{align*}
+            </p>
+          </section>
+
+          <section
+            data-background-image="/illness-cost-back.jpg"
+            data-background-opacity=".5"
+          >
+            <h6>{{ slide17.title }}</h6>
+            <p class="r-fit-text">
+              \begin{aligned} CP_{r} = i_{r}\,f_{r}\,h_{r}\,q_{r},\\
+              \end{aligned} \begin{align*} & {{ commone.where }} \\ & i_{r} -
+              {{ slide17.formula.i_r }}\\ &f_{r} -
+              {{ slide17.formula.f_r }}\\ &h_{r} -
+              {{ slide17.formula.h_r }}\\ &q_{r} -
+              {{ slide17.formula.q_r }} \end{align*}
+            </p>
+          </section>
+
+        </section>
+
+        <section data-background-color="#673AB7">
+          <h3>{{ slide18.title }}</h3>
+          <p class="r-fit-text">
+            \begin{aligned} S_{t}\,(\,C\,=\,1\,)\,-\,S_{t}\,(\,C\,=\,0),\\
+            \end{aligned} \begin{align*} & {{ common.where }}\\ &S_{t} -
+            {{ slide18.formula.s_t }},\\ &C -
+            {{ slide18.formula.c }}.\\ \end{align*}
+          </p>
+        </section>
+
+        <section
+          data-background-image="/assessment-back.jpg"
+          data-background-opacity=".2"
+        >
+          <h2>{{ slide19.title }}</h2>
+        </section>
+
+        <section>
+          <h2>{{ slide20.title }}</h2>
+          <ul>
+            <li class="fragment fade-right">
+              {{ slide20.levels.top }}
+            </li>
+            <li class="fragment fade-right">
+              {{ slide20.levels.middle }}
+            </li>
+            <li class="fragment fade-right">
+              {{ slide20.levels.bottom }}
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <section data-background-color="white">
+            <h6>{{ slide21.title }}</h6>
+            <p class="r-fit-text">
+              \begin{aligned} Adjusted\:CP_{r} =
+              i_{r}\,f_{r}\,h_{r}\,q_{r}\,(\,1\,-\,l_{r}\,),\\ \end{aligned}
+              \begin{align*} & l_{r} -
+              {{ slide21.formula.l_r }} \end{align*}
+            </p>
+          </section>
+
+          <section data-background-color="white">
+            <div style="text-align: left">
+              <h3>{{ common.totalCosts }}:</h3>
+              <h5 class="fragment fade-left" style="color: rgb(218, 13, 13)">
+                {{ slide22.abs }}
+              </h5>
+              <small class="fragment fade-left" style="color: rgb(226, 34, 34)"
+                >{{ slide22.share }}</small
+              >
+            </div>
+          </section>
+
+          <section data-background-color="white">
+            <h5>{{ slide23.title }}</h5>
+            <img src="/{{ $lang }}/assessment-2.jpg" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <img src="/{{ $lang }}/catering.jpg" style="border-radius: 5px" />
+            <h3>{{ common.totalCosts }}:</h3>
+            <h6 class="fragment fade-left" style="color: rgb(218, 13, 13)">
+              {{ slide24.abs }}<span style="margin-left:.25em;">&#x20BD;</span>
+            </h6>
+            <small class="fragment fade-left" style="color: rgb(226, 34, 34)"
+              >{{ slide24.share }}</small
+            >
+          </section>
+
+          <section>
+            <img src="/{{ $lang }}/entertainment.jpg" style="border-radius: 5px" />
+            <h3>{{ common.totalCosts }}:</h3>
+            <h6 class="fragment fade-left" style="color: rgb(218, 13, 13)">
+              {{ slide25.abs }} <span style="margin-left:.25em;">&#x20BD;</span>
+            </h6>
+            <small class="fragment fade-left" style="color: rgb(226, 34, 34)"
+              >{{ slide25.share }}</small
+            >
+          </section>
+
+          <section>
+            <img src="/{{ $lang }}/finance.jpg" style="border-radius: 5px" />
+            <h3>{{ common.totalIncome }}:</h3>
+            <h6 class="fragment fade-left" style="color: rgb(47, 170, 22)">
+              {{ slide26.abs }} <span style="margin-left:.25em;">&#x20BD;</span>
+            </h6>
+            <small class="fragment fade-left" style="color: rgb(47, 170, 22)"
+              >{{ slide26.share }}</small
+            >
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>{{ common.totalCosts }}:</h3>
+            <h6 style="color: rgb(218, 13, 13)">
+              {{ slide27.abs }} <span style="margin-left:.25em;">&#x20BD;</span>
+            </h6>
+            <small style="color: rgb(226, 34, 34)">
+              {{ slide27.share }}
+            </small>
+            <div class="r-stack">
+              <img
+                src="/{{ $lang }}/SmallProduct.jpg"
+                class="fragment fade-left"
+                style="border-radius: 5px"
+              />
+              <img
+                src="/{{ $lang }}/LargeProduct.jpg"
+                class="fragment fade-left"
+                style="border-radius: 5px"
+              />
+            </div>
+          </section>
+
+          <section>
+            <h3>{{ common.totalCosts }}:</h3>
+            <h6 style="color: rgb(218, 13, 13)">
+              {{ slide28.abs }}
+              <span style="margin-left:.25em;">&#x20BD;</span>
+            </h6>
+            <small style="color: rgb(226, 34, 34)"
+              >{{ slide28.share }}</small
+            >
+            <div class="r-stack">
+              <img
+                src="/{{ $lang }}/SmallNonProduct.jpg"
+                class="fragment fade-left"
+                style="border-radius: 5px"
+              />
+              <img
+                src="/{{ $lang }}/LargeNonProduct.jpg"
+                class="fragment fade-left"
+                style="border-radius: 5px"
+              />
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h4>{{ slide29.title }}</h4>
+          <p>
+            {{ slide29.details }}.
+          </p>
+        </section>
+
+        <section>
+          <h2>{{ slide29.thanks }} !</h2>
+        </section>
+
+        <section
+          data-background-video="/second-back.mp4"
+          data-background-video-loop
+          data-background-video-muted
+          data-background-opacity="0.2"
+          style="text-align: left"
+        >
+          <h6>
+            {{ slide1.title }} <span style="color: rgb(240, 40, 40)">COVID-19</span>
+          </h6>
+          <div style="font-size: 20px">
+            <p style="font-style: italic">
+              <span
+                style="
+                  color: rgb(145, 142, 142);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 23px;
+                "
+                >{{ slide29.author.title }}:</span
+              >
+              {{ slide29.author.detail }}
+            </p>
+            <p style="font-style: italic">
+              <span
+                style="
+                  color: rgb(145, 142, 142);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 23px;
+                "
+                >{{ slide29.advisor.title }}:</span
+              >
+              {{ slide29.advisor.detail }}
+            </p>
+            <p style="font-style: italic">
+              <span
+                style="
+                  color: rgb(145, 142, 142);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 23px;
+                "
+                >{{ slide29.reviewer.title }}:</span
+              >
+              {{ slide29.reviewer.detail }}
+            </p>
+            <p style="font-style: italic">
+              <span
+                style="
+                  color: rgb(145, 142, 142);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 23px;
+                "
+                >{{ slide29.year }}:</span
+              >
+              2021
+            </p>
+            <p style="font-style: italic">
+              <span
+                style="
+                  color: rgb(145, 142, 142);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 23px;
+                "
+                ><a style="color: rgb(240, 40, 40) !important" href="/{{ $lang }}/panel.html">
+                  {{ slide29.extraMaterials }}</a></span
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/reveal.js"></script>
+    <script src="/reveal-math-plugin.js"></script>
+    <script>
+      new Reveal({
+        plugins: [RevealMath],
+        controlsTutorial: true,
+        overview: true,
+        touch: true,
+        slideNumber: true,
+        showSlideNumber: 'all',
+      }).initialize();
+    </script>
+  </body>
+</html>

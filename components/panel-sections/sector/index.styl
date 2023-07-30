@@ -5,19 +5,28 @@
   grid-row-gap: 1.5rem;
   grid-column-gap: 3rem
 
+  @media $max-md
+    grid-template-columns 1fr
+    grid-template-rows 25rem repeat(3, auto)
+    grid-row-gap 3rem
+
   &__chart
   &__table
-    grid-column 1 / 5
+    @media $min-md
+      grid-column 1 / 5
 
   &__list
-    grid-column 5 / -1
+    @media $min-md
+      grid-column 5 / -1
 
   &__table
-    grid-row 2 / -1
+    @media $min-md
+      grid-row 2 / -1
 
   &__card
-    grid-column 5 / -1
-    align-self start
+    @media $min-md
+      grid-column 5 / -1
+      align-self start
 
 
 

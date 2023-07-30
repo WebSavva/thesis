@@ -1,8 +1,16 @@
 import { defineComponent, type PropType } from '#imports';
 
-import { regions, type RegionObservation } from '@/data';
+import type { RegionObservation } from '@/data';
+import { xlg } from '@/assets/styles/breakpoints.json';
+import { useRegions } from '@/composables/use-regions';
+
 import type { SortDir } from './sort-icon/index';
 import SortIcon from './sort-icon/index.vue';
+
+const LOCALE_COMPARE_MAP = {
+  ru: 'ru-RU',
+  en: 'en-GB',
+};
 
 export default defineComponent({
   name: 'RegionsTable',
@@ -20,6 +28,12 @@ export default defineComponent({
 
   emits: ['update:activeRegion'],
 
+  setup() {
+    return {
+      regions: useRegions(),
+    };
+  },
+
   data() {
     return {
       sortDir: 'asc' as SortDir,
@@ -32,45 +46,76 @@ export default defineComponent({
       return [
         {
           id: 'name',
-          label: 'Субъект РФ',
+          label: {
+            en: 'Region',
+            ru: 'Субъект РФ',
+          },
           sortType: 'character',
         },
         {
           id: 'salary',
-          label: 'Средняя зарплата, тыс.руб',
+          label: {
+            en: 'Average salary, th. ₽',
+            ru: 'Средняя зарплата, тыс. ₽',
+          },
           sortType: 'numeric',
         },
         {
           id: 'employed',
-          label: 'Численность занятых, тыс.',
+          label: {
+            en: 'Number of employed, th.',
+            ru: 'Численность занятых, тыс.',
+          },
           sortType: 'numeric',
         },
         {
           id: 'costs',
-          label: 'Суммарные потери, млрд.руб',
+          label: {
+            en: 'Total costs, bn. ₽',
+            ru: 'Суммарные потери, млрд. ₽',
+          },
           sortType: 'numeric',
         },
-      ] as const;
+      ].map((item) => {
+        return {
+          ...item,
+          label: item.label[this.$int.lang],
+        };
+      });
+    },
+
+    localeCompareParam() {
+      return LOCALE_COMPARE_MAP[this.$int.lang];
     },
 
     rows() {
       const { sortType } = this.columns.find(({ id }) => this.sortId === id)!;
 
-      const { sortId, sortDir } = this;
+      const { sortDir } = this;
 
-      return [...regions].sort(({ [sortId]: aValue }, { [sortId]: bValue }) => {
-        const isAsc = this.sortDir === 'asc';
+      const sortedRegions = [...this.regions].sort((prevRegion, nextRegion) => {
+        const isAsc = sortDir === 'asc';
 
         if (sortType === 'character') {
-          return 1;
+          const sortName = this.sortId as 'name';
+
+          const aValue = prevRegion[sortName];
+          const bValue = nextRegion[sortName];
 
           return isAsc
-            ? aValue.localeCompare('en-GB', bValue)
-            : aValue.localeCompare('en-GB', bValue);
+            ? aValue.localeCompare(bValue, this.localeCompareParam)
+            : bValue.localeCompare(aValue, this.localeCompareParam);
         } else {
+          const sortName = this.sortId as keyof RegionObservation;
+
+          const aValue = prevRegion[sortName] as number;
+          const bValue = nextRegion[sortName] as number;
+
           return isAsc ? aValue - bValue : bValue - aValue;
         }
       });
+
+      return sortedRegions;
     },
   },
 
@@ -98,7 +143,7 @@ export default defineComponent({
 
       const selectedRow = tableBody.querySelector(`[data-region-id="${id}"]`);
 
-      if (!selectedRow) return;
+      if (!selectedRow || window.innerWidth <= xlg) return;
 
       selectedRow.scrollIntoView({
         block: 'center',
