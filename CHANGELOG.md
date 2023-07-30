@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/WebSavva/thesis/compare/v1.0.2...v1.0.3) (2023-07-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* baseUrl is added for all links where it is necessary
+
+### Bug Fixes
+
+* baseUrl is added for all links where it is necessary ([2fa58dd](https://github.com/WebSavva/thesis/commit/2fa58dd0a7a324e10fb0ae5a99a8aea10ab5f155))
+
 ### [1.0.2](https://github.com/WebSavva/thesis/compare/v1.0.1...v1.0.2) (2023-07-30)
 
 
