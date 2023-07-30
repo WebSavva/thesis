@@ -4,6 +4,9 @@ on:
   push:
     branches: [master]
 
+env:
+  NUXT_APP_BASE_URL: /thesis
+
 jobs:
   build-and-deploy:
     name: Install, prepare and cache
