@@ -41,7 +41,7 @@
         <div class="map__tooltip__content">
           <div class="map__tooltip__row-name">
             <img
-              :src="`/regions/${hoveredRegion.img}`"
+              :src="$baseUrl.append(`/regions/${hoveredRegion.img}`)"
               class="map__tooltip__flag"
             >
 

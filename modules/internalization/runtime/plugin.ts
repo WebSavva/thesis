@@ -18,8 +18,11 @@ export default defineNuxtPlugin(({ vueApp }) => {
         lang,
         dict,
 
-        hrefWithLang: (href: string) => {
-          return `/${lang}${href}`;
+        hrefWithLang: (href: string, withBaseUrl = true) => {
+          const translatedPath = `/${lang}${href}`;
+          if (!withBaseUrl) return translatedPath;
+
+          return vueApp.$nuxt.$baseUrl.append(translatedPath);
         },
       },
     },

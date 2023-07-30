@@ -14,6 +14,11 @@ export interface ModuleOptions {
   dictionary: Record<string, Record<string, any>>;
 }
 
+const baseUrl =
+  !process.env.NUXT_APP_BASE_URL || process.env.NUXT_APP_BASE_URL === '/'
+    ? ''
+    : process.env.NUXT_APP_BASE_URL;
+
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     configKey: 'internalization',
@@ -71,10 +76,13 @@ export default defineNuxtModule<ModuleOptions>({
           pages.push(translatedPage);
 
           if (page.path === '/' && lang === 'en') {
-            const defaultIndexPage = defu({
-              name: 'index',
-              meta: intMeta
-            }, page);
+            const defaultIndexPage = defu(
+              {
+                name: 'index',
+                meta: intMeta,
+              },
+              page
+            );
 
             pages.push(defaultIndexPage);
           }
@@ -127,17 +135,21 @@ export default defineNuxtModule<ModuleOptions>({
           addTemplate({
             filename: `${compiledStaticIntPagesDir}/${lang}/${fileName}`,
             write: true,
-            getContents: () => template({
-              ...dictionary[lang][dictName],
-              $lang: lang,
-            }),
+            getContents: () =>
+              template({
+                ...dictionary[lang][dictName],
+                $lang: lang,
+                $baseUrl: baseUrl,
+              }),
           });
         });
       })
     );
 
     nuxt.hook('app:templates', (nuxtApp) => {
-      nuxtApp.middleware = nuxtApp.middleware.filter(( { name }) => name !== 'validate');
+      nuxtApp.middleware = nuxtApp.middleware.filter(
+        ({ name }) => name !== 'validate'
+      );
     });
 
     nuxt.hook('nitro:config', (nitroConfig) => {

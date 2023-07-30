@@ -18,7 +18,7 @@
 
       <div class="index-page__hero__btn-group">
         <NuxtLink
-          :href="$int.hrefWithLang('/panel')"
+          :href="$int.hrefWithLang('/panel', false)"
           class="index-page__hero__btn"
         >
           {{ $int.dict.index.panel }}
@@ -103,6 +103,7 @@ usePageType('index');
       padding 1rem 2rem
       background #28a745
       color #fff
+      cursor pointer
       font-size 2rem
       width 20rem
       text-align center

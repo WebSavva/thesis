@@ -93,7 +93,7 @@
 import { ref, useRoute, computed, watch, usePageType } from '#imports';
 import { NuxtLink } from '#components';
 
-import { useInternalization } from '@/composables/use-internalization'
+import { useInternalization } from '@/composables'
 
 import RegionSection from '@/components/panel-sections/region/index.vue';
 import SectorSection from '@/components/panel-sections/sector/index.vue';
@@ -108,21 +108,21 @@ const MENU_ITEMS = [
     icon: 'shield-virus',
     label: $int.dict.sidebar.mapLinkName,
     id: 'region',
-    path: $int.hrefWithLang('/panel'),
+    path: $int.hrefWithLang('/panel', false),
     heading: $int.dict.heading.map,
   },
   {
     icon: 'chart-line',
     label: $int.dict.sidebar.sectorLinkName,
     id: 'sector',
-    path: $int.hrefWithLang('/panel/sector'),
+    path: $int.hrefWithLang('/panel/sector', false),
     heading: $int.dict.heading.sector,
   },
   {
     icon: 'book-open',
     label: $int.dict.sidebar.thesisLinkName,
     id: 'thesis',
-    path: $int.hrefWithLang('/panel/thesis'),
+    path: $int.hrefWithLang('/panel/thesis', false),
     heading: $int.dict.heading.thesis,
   },
   {

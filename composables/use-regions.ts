@@ -1,6 +1,6 @@
 import { regions } from '@/data';
 
-import { useInternalization } from './use-internalization';
+import { useInternalization } from './globals';
 
 const BLACKLISTED_REGIONS = [91];
 

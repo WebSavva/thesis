@@ -1,9 +1,11 @@
 import { useHead } from '#imports';
 
-import { useInternalization } from './use-internalization';
+import { useInternalization, useBaseUrl } from './globals';
 
 export const usePageType = (type: string) => {
   const { dict } = useInternalization();
+  const $baseUrl = useBaseUrl();
+
 
   const { title, description } = (dict as any)[type].meta as {
     title: string;
@@ -23,7 +25,7 @@ export const usePageType = (type: string) => {
       },
       {
         property: 'og:image',
-        content: '/og-image.jpg',
+        content: $baseUrl.append('/og-image.jpg'),
       },
       {
         property: 'og:description',

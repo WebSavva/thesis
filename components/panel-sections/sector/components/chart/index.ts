@@ -9,7 +9,7 @@ import {
 } from 'vue-demi';
 
 import { type SectorName, gpdSectors } from '@/data';
-import { useInternalization } from '@/composables/use-internalization';
+import { useInternalization } from '@/composables';
 import useChartJs from '@/composables/use-chart-js';
 
 const LABELS = {

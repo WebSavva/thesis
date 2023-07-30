@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/reveal.css">
+    <link rel="stylesheet" href="{{ $baseUrl }}/reveal.css">
     <title>{{ meta.title }}</title>
     <meta name="description" content="{{ meta.description }}">
     <meta property="og:title" content="{{ neta.title }}">
-    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:image" content="{{ $baseUrl }}/og-image.jpg">
     <meta property="og:description" content="{{ meta.description }}">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section
-          data-background-video="/second-back.mp4"
+          data-background-video="{{ $baseUrl }}/second-back.mp4"
           data-background-video-loop
           data-background-video-muted
           data-background-opacity="0.5"
@@ -26,7 +26,7 @@
         </section>
 
         <section
-          data-background-video="/market-selloff.mp4"
+          data-background-video="{{ $baseUrl }}/market-selloff.mp4"
           data-background-video-loop
           data-background-video-muted
           data-background-opacity="0.2"
@@ -69,7 +69,7 @@
 
         <section>
           <section
-            data-background-image="/tasks-back.jpg"
+            data-background-image="{{ $baseUrl }}/tasks-back.jpg"
             data-background-opacity=".2"
           >
             <h3>{{ slide4.title }}</h3>
@@ -193,15 +193,15 @@
               <h2 class="fragment fade-out current-visible">
                 {{ slide13.title }}
               </h2>
-              <img class="fragment fade-in" src="/PEP_3.png" />
-              <img class="fragment fade-in" src="/PEP_4.png" />
+              <img class="fragment fade-in" src="{{ $baseUrl }}/PEP_3.png" />
+              <img class="fragment fade-in" src="{{ $baseUrl }}/PEP_4.png" />
             </div>
           </section>
         </section>
 
         <section>
           <section
-            data-background-video="/illness-cost-back.mp4"
+            data-background-video="{{ $baseUrl }}/illness-cost-back.mp4"
             data-background-video-loop
             data-background-video-muted
             data-background-opacity=".4"
@@ -210,7 +210,7 @@
           </section>
 
           <section
-            data-background-image="/illness-cost-back.jpg"
+            data-background-image="{{ $baseUrl }}/illness-cost-back.jpg"
             data-background-opacity=".5"
           >
             <h3>{{ slide15.title }}</h3>
@@ -223,7 +223,7 @@
           </section>
 
           <section
-            data-background-image="/illness-cost-back.jpg"
+            data-background-image="{{ $baseUrl }}/illness-cost-back.jpg"
             data-background-opacity=".5"
           >
             <h6>{{ slide16.title }}</h6>
@@ -238,7 +238,7 @@
           </section>
 
           <section
-            data-background-image="/illness-cost-back.jpg"
+            data-background-image="{{ $baseUrl }}/illness-cost-back.jpg"
             data-background-opacity=".5"
           >
             <h6>{{ slide17.title }}</h6>
@@ -265,7 +265,7 @@
         </section>
 
         <section
-          data-background-image="/assessment-back.jpg"
+          data-background-image="{{ $baseUrl }}/assessment-back.jpg"
           data-background-opacity=".2"
         >
           <h2>{{ slide19.title }}</h2>
@@ -311,13 +311,13 @@
 
           <section data-background-color="white">
             <h5>{{ slide23.title }}</h5>
-            <img src="/{{ $lang }}/assessment-2.jpg" />
+            <img src="{{ $baseUrl }}/{{ $lang }}/assessment-2.jpg" />
           </section>
         </section>
 
         <section>
           <section>
-            <img src="/{{ $lang }}/catering.jpg" style="border-radius: 5px" />
+            <img src="{{ $baseUrl }}/{{ $lang }}/catering.jpg" style="border-radius: 5px" />
             <h3>{{ common.totalCosts }}:</h3>
             <h6 class="fragment fade-left" style="color: rgb(218, 13, 13)">
               {{ slide24.abs }}<span style="margin-left:.25em;">&#x20BD;</span>
@@ -328,7 +328,7 @@
           </section>
 
           <section>
-            <img src="/{{ $lang }}/entertainment.jpg" style="border-radius: 5px" />
+            <img src="{{ $baseUrl }}/{{ $lang }}/entertainment.jpg" style="border-radius: 5px" />
             <h3>{{ common.totalCosts }}:</h3>
             <h6 class="fragment fade-left" style="color: rgb(218, 13, 13)">
               {{ slide25.abs }} <span style="margin-left:.25em;">&#x20BD;</span>
@@ -339,7 +339,7 @@
           </section>
 
           <section>
-            <img src="/{{ $lang }}/finance.jpg" style="border-radius: 5px" />
+            <img src="{{ $baseUrl }}/{{ $lang }}/finance.jpg" style="border-radius: 5px" />
             <h3>{{ common.totalIncome }}:</h3>
             <h6 class="fragment fade-left" style="color: rgb(47, 170, 22)">
               {{ slide26.abs }} <span style="margin-left:.25em;">&#x20BD;</span>
@@ -361,12 +361,12 @@
             </small>
             <div class="r-stack">
               <img
-                src="/{{ $lang }}/SmallProduct.jpg"
+                src="{{ $baseUrl }}/{{ $lang }}/SmallProduct.jpg"
                 class="fragment fade-left"
                 style="border-radius: 5px"
               />
               <img
-                src="/{{ $lang }}/LargeProduct.jpg"
+                src="{{ $baseUrl }}/{{ $lang }}/LargeProduct.jpg"
                 class="fragment fade-left"
                 style="border-radius: 5px"
               />
@@ -384,12 +384,12 @@
             >
             <div class="r-stack">
               <img
-                src="/{{ $lang }}/SmallNonProduct.jpg"
+                src="{{ $baseUrl }}/{{ $lang }}/SmallNonProduct.jpg"
                 class="fragment fade-left"
                 style="border-radius: 5px"
               />
               <img
-                src="/{{ $lang }}/LargeNonProduct.jpg"
+                src="{{ $baseUrl }}/{{ $lang }}/LargeNonProduct.jpg"
                 class="fragment fade-left"
                 style="border-radius: 5px"
               />
@@ -409,7 +409,7 @@
         </section>
 
         <section
-          data-background-video="/second-back.mp4"
+          data-background-video="{{ $baseUrl }}/second-back.mp4"
           data-background-video-loop
           data-background-video-muted
           data-background-opacity="0.2"
@@ -475,7 +475,7 @@
                   font-weight: bold;
                   font-size: 23px;
                 "
-                ><a style="color: rgb(240, 40, 40) !important" href="/{{ $lang }}/panel.html">
+                ><a style="color: rgb(240, 40, 40) !important" href="{{ $baseUrl }}/{{ $lang }}/panel.html">
                   {{ slide29.extraMaterials }}</a></span
               >
             </p>

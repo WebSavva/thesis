@@ -1,6 +1,6 @@
 import { defineComponent, ref } from '#imports';
 
-import { sectorNames, type SectorName } from '@/data';
+import { sectorNames } from '@/data';
 import SectorList from './components/list/index.vue';
 import SectorChart from './components/chart/index.vue';
 import SectorTable from './components/table/index.vue';

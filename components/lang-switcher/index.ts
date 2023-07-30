@@ -8,14 +8,14 @@ export default defineComponent({
   computed: {
     langs() {
       return languages.map((lang) => {
-        const basePath = this.$route.path.replace(
+        const basePath = this.$baseUrl.remove(this.$route.path).replace(
           new RegExp(`/${this.$int.lang}`),
           ''
         );
 
         return {
           id: lang,
-          href: `/${lang}${basePath}`
+          href: this.$baseUrl.append(`/${lang}${basePath}`)
         }
       })
     },

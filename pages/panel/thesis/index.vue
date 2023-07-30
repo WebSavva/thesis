@@ -29,11 +29,13 @@
 >
 import { ref, definePageMeta } from '#imports';
 
-import { useInternalization } from '@/composables/use-internalization';
+import { useInternalization, useBaseUrl } from '@/composables';
 
 const {
   lang,
 } = useInternalization();
+
+const $baseUrl = useBaseUrl();
 
 definePageMeta({
   pageTransition: {
@@ -45,7 +47,7 @@ definePageMeta({
 const THESIS_DOCUMENTS = ([
   {
     id: 'thesis',
-    src: '/thesis.pdf',
+    src: $baseUrl.append('/thesis.pdf'),
     name: {
       ru: 'Текст ВКР',
       en: 'Thesis',
@@ -53,7 +55,7 @@ const THESIS_DOCUMENTS = ([
   },
   {
     id: 'mentor',
-    src: '/mentorReview.pdf',
+    src: $baseUrl.append('/mentorReview.pdf'),
     name: {
       ru: 'Отзыв научного руководителя А.В.Юркова',
       en: 'Review of the academic advisor Aleksandr Yurkov',
@@ -61,7 +63,7 @@ const THESIS_DOCUMENTS = ([
   },
   {
     id: 'employer',
-    src: '/employerReview.pdf',
+    src: $baseUrl.append('/employerReview.pdf'),
     name: {
       ru: 'Отзыв научного руководителя А.В.Юркова',
       en: 'Review of the reviewer Mikhail Meleshkin',

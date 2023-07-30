@@ -10,7 +10,7 @@
       }"
     >
       <img
-        :src="`/langs/${id}.svg`"
+        :src="$baseUrl.append(`/langs/${id}.svg`)"
         lazy="loading"
         role="presentation"
         class="lang-switcher__item__icon"
