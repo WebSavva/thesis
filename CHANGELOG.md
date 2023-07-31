@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/WebSavva/thesis/compare/v1.0.5...v1.1.0) (2023-07-31)
+
+
+### Features
+
+* unplugin icons are used instead of font-awesome cdn ([d3bfa8e](https://github.com/WebSavva/thesis/commit/d3bfa8ef58918febe33efc88ec4ea1b631d4012f))
+
 ### [1.0.5](https://github.com/WebSavva/thesis/compare/v1.0.4...v1.0.5) (2023-07-30)
 
 
