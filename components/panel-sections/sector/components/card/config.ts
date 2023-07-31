@@ -10,7 +10,7 @@ export const CARD_LABELS = {
   en: {
     title: '',
     lossHint: 'Losses',
-    profitHint: 'Profits',
+    profitHint: 'Profit',
     period: 'Period: II-IV quarters of 2020',
     absolute: 'Absolute value',
     share: 'Share of GDP in 2019',

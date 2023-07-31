@@ -20,7 +20,7 @@
     <div class="sector-card__details">
       <div class="sector-card__details__item">
         <div class="sector-card__details__item__icon">
-            <i class="fas fa-coins" />
+            <CoinsIcon />
         </div>
 
         <div class="sector-card__details__item__text">
@@ -33,16 +33,20 @@
               {{
                 summary.losses
               }}
-            </span> {{  $int.dict.measurement.billion }}
+            </span>
 
-            <i class="fas fa-ruble-sign" />
+            <span>
+              {{  $int.dict.measurement.billion }}
+            </span>
+
+            <RubleSignIcon />
           </span>
         </div>
       </div>
 
       <div class="sector-card__details__item">
         <div class="sector-card__details__item__icon">
-            <i class="fas fa-chart-pie" />
+            <ChartPieIcon />
         </div>
 
         <div class="sector-card__details__item__text">
@@ -55,7 +59,7 @@
               {{ summary.prevYearShare * 1e2 }}
             </span>
 
-            <i class="fas fa-percent" />
+            <PercentIcon />
           </span>
         </div>
       </div>

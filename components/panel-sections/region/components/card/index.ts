@@ -1,11 +1,19 @@
 import { defineComponent, type PropType, computed } from '#imports';
 
+import ChartBarIcon from '~icons/fa-solid/chart-bar';
+import ExclamationIcon from '~icons/fa-solid/exclamation';
+
 import type { RegionObservation } from '@/data';
 import { round } from '@/utils/round';
 import { useRegions } from '@/composables/use-regions';
 
 export default defineComponent({
   name: 'RegionCard',
+
+  components: {
+    ChartBarIcon,
+    ExclamationIcon,
+  },
 
   props: {
     activeRegion: {

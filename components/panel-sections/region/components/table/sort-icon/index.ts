@@ -1,5 +1,9 @@
 import { defineComponent, type PropType } from 'vue-demi';
 
+import SortIcon from '~icons/fa-solid/sort';
+import SortUpIcon from '~icons/fa-solid/sort-amount-up';
+import SortDownIcon from '~icons/fa-solid/sort-amount-down';
+
 export type SortDir = 'desc' | 'asc';
 
 export default defineComponent({
@@ -30,9 +34,9 @@ export default defineComponent({
     },
 
     icon() {
-      if (this.activeSort !== this.sort) return 'fa-sort';
+      if (this.activeSort !== this.sort) return SortIcon;
 
-      return `fa-sort-amount-${this.isAscDir ? 'down' : 'up'}`;
+      return this.isAscDir ? SortDownIcon : SortUpIcon;
     },
   },
 

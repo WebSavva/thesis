@@ -1,11 +1,23 @@
 import { defineComponent, type PropType } from '#imports';
 
+import CoinsIcon from '~icons/fa-solid/coins';
+import RubleSignIcon from '~icons/fa-solid/ruble-sign';
+import PercentIcon from '~icons/fa-solid/percent';
+import ChartPieIcon from '~icons/fa-solid/chart-pie';
+
 import { type SectorName, sectorSummaries } from '@/data';
 
 import { CARD_LABELS } from './config';
 
 export default defineComponent({
   name: 'SectorCard',
+
+  components: {
+    CoinsIcon,
+    ChartPieIcon,
+    RubleSignIcon,
+    PercentIcon,
+  },
 
   props: {
     activeSectorId: {

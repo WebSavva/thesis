@@ -1,8 +1,6 @@
 <template>
-  <i
-    class="fas"
-    :class="icon"
-    title="Сортировать"
+  <Component
+    :is="icon"
     @click="onClick"
   />
 </template>

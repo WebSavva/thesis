@@ -39,11 +39,23 @@
 </template>
 
 <script setup>
-import { usePageType } from '#imports';
+import { usePageType, useHead, useBaseUrl } from '#imports';
 
 import LanguageSwitcher from '@/components/lang-switcher/index.vue';
 
+const $baseUrl = useBaseUrl();
+
 usePageType('index');
+
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      href: $baseUrl.append('/t3.mp4'),
+      as: 'video',
+    }
+  ]
+});
 </script>
 
 <style lang="stylus" scoped>
@@ -51,6 +63,11 @@ usePageType('index');
   width 100%
   height 100vh
   position relative
+
+  @media $max-sm
+    display flex
+    justify-content center
+    align-items center
 
   &__bg-video
   &__overlay
@@ -78,6 +95,10 @@ usePageType('index');
     flex-direction column
     align-items center
 
+    @media $max-sm
+      position static
+      transform none
+
     &__header
       color #ffff
       text-transform uppercase
@@ -86,6 +107,7 @@ usePageType('index');
       letter-spacing 0.5rem
       text-align center
       line-height 1.5
+      z-index 1
 
       @media $max-xs
         font-size 3.75rem

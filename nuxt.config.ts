@@ -34,6 +34,10 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: [
+    'unplugin-icons/nuxt'
+  ],
+
   internalization: {
     dictionary,
   },
